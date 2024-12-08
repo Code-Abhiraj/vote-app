@@ -11,7 +11,7 @@ require('dotenv').config();
 const app = express();
 app.use(express.static(path.join(__dirname, "dist")));
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: process.env.DEPLOYED_URI
   }));
 
 app.use(express.json());
